@@ -15,7 +15,7 @@ chrome_options = Options()
 chrome_options.add_experimental_option("detach", True)
 
 # Specify the path to chromedriver.exe
-service = Service(r"C:\Users\vissalini\OneDrive - Permodalan Nasional Berhad\Documents\Practice\Driver\2\chromedriver-win64\chromedriver.exe")
+service = Service(r"path to chromedriver")
 
 # Initialize WebDriver with the Service object and options
 driver = webdriver.Chrome(service=service, options=chrome_options)
@@ -29,10 +29,10 @@ input_element2 = driver.find_element(By.XPATH, "//input[@id='mat-input-1']")
 submit_button = driver.find_element(By.XPATH, "//button[@type='submit']")
 
 # Input a value into the field
-input_value = "vissalini"
+input_value = "username"
 input_element.send_keys(input_value)
 
-input_value2 = "P@ssw0rd@PNB"
+input_value2 = "password"
 input_element2.send_keys(input_value2)
 
 submit_button.click()
